@@ -1,5 +1,7 @@
 package com.pluralsight.collection;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -12,6 +14,15 @@ public class Main {
         System.out.println("Max Size: " + numbers.getItems().size());
         System.out.println("List of numbers: " + (numbers.getItems()));
 
+        System.out.println("==============================================");
+
+        FixedList<LocalDate> dates = new FixedList<>(2);
+        dates.add(LocalDate.now());
+        dates.add(LocalDate.now());
+        dates.add(LocalDate.ofEpochDay(15)); // this line should fail
+
+        System.out.println("Max Size: " + dates.getItems().size());
+        System.out.println("List of dates: " + dates.getItems());
 
 
         }
