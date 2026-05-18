@@ -16,8 +16,16 @@ public class FixedList<T> {
     public void add(T item) {
         if (items.size() < maxSize) {
             items.add(item);
+        } else {
+            System.err.println("List is full.");
         }
     }
+
+    public List<T> getItems() {
+        return items;
+    }
+
+
 
 
 
