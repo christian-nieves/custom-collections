@@ -17,7 +17,7 @@ public class FixedList<T> {
         if (items.size() < maxSize) {
             items.add(item);
         } else {
-            System.err.println("List is full.");
+            System.err.println("List is full. Cannot add: " + item);
         }
     }
 
